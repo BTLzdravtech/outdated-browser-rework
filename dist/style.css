@@ -1,5 +1,5 @@
 #outdated {
-  font-family: "Open Sans", "Segoe UI", sans-serif;
+  font-family: "Gotham A", "Gotham B", sans-serif;
   position: absolute;
   background-color: #f25648;
   color: white;
@@ -20,6 +20,7 @@
     text-align: center;
     vertical-align: middle; }
   #outdated h6 {
+    font-family: "Gotham Rounded A", "Gotham Rounded B", sans-serif;
     font-size: 25px;
     line-height: 25px;
     margin: 12px 0; }

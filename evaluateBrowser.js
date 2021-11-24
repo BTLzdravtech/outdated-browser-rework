@@ -9,6 +9,16 @@ var DEFAULTS = {
 	IE: false
 }
 
+var UPDATE_URL = {
+	Chrome: 'https://www.google.com/chrome/',
+	Edge: 'https://www.microsoft.com/en-us/edge',
+	Safari: 'https://support.apple.com/en-us/HT204416',
+	Opera: 'https://www.opera.com/download',
+	Firefox: 'https://www.mozilla.org/cs/firefox/new/',
+	Vivaldi: 'https://vivaldi.com/cs/download/',
+	IE: 'https://www.microsoft.com/en-us/edge'
+}
+
 var EDGEHTML_VS_EDGE_VERSIONS = {
 	12: 0.1,
 	13: 21,
@@ -54,6 +64,8 @@ module.exports = function (parsedUserAgent, options) {
 		}
 		return isUnsupported;
 	}
+
+	var updateUrl = (browserName in UPDATE_URL) ? UPDATE_URL[browserName] : null
 
 	var isBrowserUnsupportedResult = isBrowserUnsupported();
 
@@ -134,6 +146,7 @@ module.exports = function (parsedUserAgent, options) {
 		isAndroidButNotChrome: isAndroidButNotChrome,
 		isBrowserOutOfDate: isBrowserOutOfDate(),
 		isBrowserUnsupported: isBrowserUnsupportedResult,
-		isPropertySupported: isPropertySupported(requiredCssProperty)
+		isPropertySupported: isPropertySupported(requiredCssProperty),
+		updateUrl: updateUrl
 	};
 }

@@ -4,7 +4,7 @@ var deepExtend = require("./extend")
 var UserAgentParser = require("ua-parser-js")
 
 var COLORS = {
-	salmon: "#f25648",
+	salmon: "#c9252c",
 	white: "white"
 }
 
@@ -101,7 +101,7 @@ module.exports = function(options) {
 			}
 		}
 	
-		var getMessage = function (lang) {
+		var getMessage = function (lang, updateUrl) {
 			var defaultMessages = languageMessages[lang] || languageMessages.en
 			var customMessages = options.messages && options.messages[lang]
 			var messages = deepExtend({}, defaultMessages, customMessages)
@@ -110,10 +110,10 @@ module.exports = function(options) {
 				web:
 					"<p>" +
 					messages.update.web +
-					(messages.url ? (
+					(updateUrl ? (
 						'<a id="buttonUpdateBrowser" rel="nofollow" href="' +
-						messages.url +
-						'">' +
+						updateUrl +
+						'" target="_blank">' +
 						messages.callToAction +
 						"</a>"
 					) : '') +
@@ -164,7 +164,7 @@ module.exports = function(options) {
 			if (fullscreen) {
 				insertContentHere.classList.add("fullscreen")
 			}
-			insertContentHere.innerHTML = getMessage(language)
+			insertContentHere.innerHTML = getMessage(language, result.updateUrl)
 			startStylesAndEvents()
 		}
 	}
