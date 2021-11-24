@@ -43,7 +43,7 @@
 		"callToAction": "Actualitzar el meu navegador ara",
 		"close": "Tancar"
 	},
-	"zh": {
+	"cn": {
 		"outOfDate": "您的浏览器已过时",
 		"update": {
 			"web": "要正常浏览本网站请升级您的浏览器。",
@@ -54,7 +54,7 @@
 		"callToAction": "现在升级",
 		"close": "关闭"
 	},
-	"cz": {
+	"cs": {
 		"outOfDate": "Váš prohlížeč je zastaralý!",
 		"update": {
 			"web": "Pro správné zobrazení těchto stránek aktualizujte svůj prohlížeč. ",
