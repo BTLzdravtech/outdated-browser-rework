@@ -1,7 +1,7 @@
 #outdated {
   font-family: "Gotham A", "Gotham B", sans-serif;
   position: absolute;
-  background-color: #f25648;
+  background-color: #c9252c;
   color: white;
   display: none;
   overflow: hidden;
@@ -40,7 +40,7 @@
     width: 230px; }
     #outdated #buttonUpdateBrowser:hover {
       background-color: white;
-      color: #f25648; }
+      color: #c9252c; }
   #outdated .last {
     height: 20px;
     position: absolute;
